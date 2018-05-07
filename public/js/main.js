@@ -863,7 +863,7 @@ function generateMessageInfo(messages, transfersInfo, outputsUnit, assocCommissi
 socket.on('info', function (data) {
 	if (bWaitingForHighlightNode) bWaitingForHighlightNode = false;
 	if (data) {
-		var childOut = '', parentOut = '', authorsOut = '', witnessesOut = '';
+		var childOut = '', parentOut = '', authorsOut = '' /* , witnessesOut = '' */;
 		data.child.forEach(function (unit) {
 			childOut += '<div><a href="#' + unit + '">' + unit + '</a></div>';
 		});
@@ -884,9 +884,9 @@ socket.on('info', function (data) {
 			//authorsOut += '</div>';
 			authorsOut += '';
 		});
-		data.witnesses.forEach(function (witness) {
-			witnessesOut += '<div><a href="#' + witness + '">' + witness + '</a></div>';
-		});
+		//data.witnesses.forEach(function (witness) {
+		//	witnessesOut += '<div><a href="#' + witness + '">' + witness + '</a></div>';
+		//});
 
 		$('#unit').html(data.unit);
 		$('#children').html(childOut);
@@ -900,7 +900,7 @@ socket.on('info', function (data) {
 		$('#main_chain_index').html(data.main_chain_index);
 		$('#latest_included_mc_index').html(data.latest_included_mc_index);
 		$('#is_stable').html(data.is_stable);
-		$('#witnesses').html(witnessesOut);
+		//$('#witnesses').html(witnessesOut);
 		$('#messages').html(data.sequence === 'final-bad' ? '' : generateMessageInfo(data.messages, data.transfersInfo, data.outputsUnit, data.assocCommissions));
 		if ($('#listInfo').css('display') === 'none') {
 			$('#defaultInfo').hide();
