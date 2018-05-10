@@ -255,6 +255,7 @@ function getUnitSequence(unit, cb) {
 	});
 }
 
+
 function getInfoOnUnit(unit, cb) {
 	storage.readUnitProps(db, unit, function(unitProps) {
 		storage.readJoint(db, unit, {
@@ -282,6 +283,7 @@ function getInfoOnUnit(unit, cb) {
 											messages: objJoint.unit.messages,
 											transfersInfo: transfersInfo,
 											outputsUnit: unitOutputs,
+											is_on_main_chain:unitProps.is_on_main_chain,
 											date: moment(objJoint.unit.timestamp * 1000).format(),
 											assocCommissions: assocCommissions
 										};

@@ -886,6 +886,7 @@ socket.on('info', function(data) {
 		$('#main_chain_index').html(data.main_chain_index);
 		$('#latest_included_mc_index').html(data.latest_included_mc_index);
 		$('#is_stable').html(data.is_stable);
+		$('#is_on_main_chain').html(data.is_on_main_chain);
 		//$('#witnesses').html(witnessesOut);
 		$('#messages').html(data.sequence === 'final-bad' ? '' : generateMessageInfo(data.messages, data.transfersInfo, data.outputsUnit, data.assocCommissions));
 		if ($('#listInfo').css('display') === 'none') {
