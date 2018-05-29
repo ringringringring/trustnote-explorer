@@ -20,28 +20,25 @@ body {
 }
 
 #menu #inputSearch {
-	width: 410px;
-	height: 42px;
+	width: 378px;
+	height: 30px;
 	border: 1px solid #ccc;
 	outline: none;
-	padding-left: 10px;
-	box-sizing: border-box;
-	border-radius: 2px;
-	font-size: 16px;
-
+	padding: 0 15px;
+	border-radius: 50px;
 }
 
 #submitSearch {
 	width: 32px;
 	height: 32px;
 	border: 0;
-	background: url(../img/search.png) center no-repeat transparent;
+	background: url(/img/search.png) center no-repeat transparent;
 	background-size: 20px;
 	cursor: pointer;
 	outline: none;
 	position: absolute;
 	right: 5px;
-	top: 23px;
+	top: 0;
 	vertical-align: middle;
 }
 
@@ -75,26 +72,12 @@ body {
 	line-height: 78px;
 }
 
-#menuCenter {
-	float: right;
-	height: 100%;
-	margin-right: 60px;;
-}
-#menuCenter a{
-	font-size: 20px;
-	color: #fff;
-	line-height: 78px;
-}
-#menuCenter a:hover{
-	text-decoration: underline;
-}
-
 #menuRight {
 	float: right;
+	margin-top: 18px;
 	margin-right: 24px;
 	width: 410px;
-	height: 78px;
-	line-height: 78px;
+	height: 42px;
 	position: relative;
 }
 
@@ -565,15 +548,15 @@ pre {
 	position: absolute;
 	z-index: 999;
 	cursor: pointer;
-	background: url(../img/111.png) center no-repeat;
+	background: url(/img/ToTop.png) center no-repeat;
 	background-size: 40px;
 	top: 25px;
-	right: 40px;
+	right: 25px;
 	border-radius: 100%;
 }
 
 #goToTop:hover {
-	background: url(../img/111.png) center no-repeat;
+	background: url(/img/ToTop_hover.png) center no-repeat;
 	background-size: 40px;
 }
 
@@ -583,13 +566,11 @@ pre {
 
 #titleGoToTop {
 	position: absolute;
-	top: 50px;
+	top: 42px;
 	text-align: center;
 	width: 68px;
-	left: -15px;
+	left: -11px;
 	display: none;
-	background: #F5F5F5;
-	border: 1px solid #000000;
 }
 
 #tableListTransactions {
