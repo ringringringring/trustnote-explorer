@@ -16,7 +16,8 @@ body {
 #menu {
 	height: 78px;
 	border-bottom: 1px solid #ccc;
-	background-color: #1C0E22;
+	/* background-color: #1C0E22; */
+	background-color: #001c50;
 }
 
 #menu #inputSearch {
